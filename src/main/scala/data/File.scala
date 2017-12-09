@@ -23,7 +23,7 @@ object File {
   }
 
   def main(args: Array[String]): Unit = {
-    etsCorpus("test.txt")
+    println("foo")
   }
 
 }
