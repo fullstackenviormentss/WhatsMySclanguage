@@ -5,6 +5,6 @@
 .idea/
 
 # Scala
-*target/
+target/
 
 data/
