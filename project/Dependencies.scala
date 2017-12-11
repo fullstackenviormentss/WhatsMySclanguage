@@ -6,5 +6,6 @@ object Dependencies {
   lazy val breezeNatives = "org.scalanlp" %% "breeze-natives" % "0.13"
   lazy val breezeViz = "org.scalanlp" %% "breeze-viz" % "0.13"
   lazy val epic = "org.scalanlp" %% "epic"  % "0.4.4"
-//  lazy val epicParserEn = "org.scalanlp" %% "epic-parser-en-span" % "2014.9.15"
+  lazy val logging = Seq("org.slf4j" % "slf4j-api" % "1.7.5",
+    "org.slf4j" % "slf4j-simple" % "1.7.5")
 }
