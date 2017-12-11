@@ -10,5 +10,6 @@ lazy val root = (project in file(".")).
     name := "WhatsMySclanguage",
     libraryDependencies += scalaTest % Test,
     libraryDependencies += breeze,
-    libraryDependencies += breezeNatives
+    libraryDependencies += breezeNatives,
+    libraryDependencies ++= logging
   )

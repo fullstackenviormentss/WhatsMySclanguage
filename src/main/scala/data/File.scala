@@ -1,29 +1,31 @@
 package scala.data
 
-import breeze.linalg._
-import java.io._
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import scala.io.Source
 
 object File {
 
   case class textSample(text: String, l1: String) // To be expanded later
+  val logger: Logger = LoggerFactory.getLogger("Data.File")
 
   def etsCorpus(indexFileName: String, delimiter: Char = ','): Array[textSample] = {
-    return Source.fromFile(indexFileName)
+    logger.info(s"Loading ETS Corpus via index file $indexFileName")
+    Source.fromFile(indexFileName)
       .getLines
       .map(_.split(delimiter))
-      .map(r => new textSample(
+      .map(r => textSample(
         this.loadFile(r(0)),
         r(2)))
       .toArray
   }
 
   def loadFile(file: String): String = {
-    return Source.fromFile(file).getLines.mkString(" ")
+    Source.fromFile(file).getLines.mkString(" ")
   }
 
   def main(args: Array[String]): Unit = {
-    println("foo")
+    logger.info("Main")
   }
 
 }
