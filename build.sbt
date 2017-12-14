@@ -13,4 +13,5 @@ lazy val root = (project in file(".")).
 //    libraryDependencies += breezeNatives,
     libraryDependencies ++= logging,
     libraryDependencies += spark
+
   )
